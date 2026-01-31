@@ -1,4 +1,24 @@
-export const businessServices = [
+// Define the valid icon names as a union type
+export type IconName = 
+  | 'Zap' 
+  | 'Bot' 
+  | 'MessageSquare' 
+  | 'Workflow' 
+  | 'TrendingUp' 
+  | 'Globe' 
+  | 'Smartphone' 
+  | 'Code' 
+  | 'Wrench' 
+  | 'FileText';
+
+// Define the service interface
+export interface Service {
+  title: string;
+  description: string;
+  icon: IconName;
+}
+
+export const businessServices: Service[] = [
   {
     title: 'End-to-End Business Process Automation',
     description: 'Eliminate manual work by automating repetitive processes using AI and intelligent workflows. From approvals and data entry to reporting and system sync, our solutions improve efficiency, accuracy, and scalability.',
@@ -36,7 +56,7 @@ export const businessServices = [
   },
 ];
 
-export const studentServices = [
+export const studentServices: Service[] = [
   {
     title: 'College Project Development – Web & Mobile Applications',
     description: 'Help students develop college-approved projects based on their requirements. Projects are built using modern technologies and include basic explanations to help students understand the workflow and present confidently.',

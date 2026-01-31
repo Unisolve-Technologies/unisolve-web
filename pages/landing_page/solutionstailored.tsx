@@ -13,11 +13,18 @@ import {
   FileText,
   Wrench,
   Code,
+  LucideProps,
 } from "lucide-react";
-import { businessServices, studentServices } from "@/lib/mockData";
+import { businessServices, studentServices, IconName } from "@/lib/mockData";
 import { cn } from "@/lib/utils";
+import { ForwardRefExoticComponent, RefAttributes } from "react";
 
-const iconMap = {
+const iconMap: Record<
+  IconName,
+  ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+  >
+> = {
   Zap,
   Bot,
   MessageSquare,

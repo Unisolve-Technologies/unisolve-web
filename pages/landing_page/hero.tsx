@@ -269,7 +269,7 @@ const Hero = ({ className }: HeroProps) => {
               Get started <ArrowRight size={14} />
             </motion.a>
 
-            <button
+            {/* <button
               onClick={() => setTheme(isDark ? "light" : "dark")}
               className="p-2 rounded-full text-zinc-400 hover:text-white transition-colors"
               style={{ background: "rgba(255,255,255,0.05)" }}
@@ -279,7 +279,7 @@ const Hero = ({ className }: HeroProps) => {
               ) : (
                 <Moon className="w-4 h-4" />
               )}
-            </button>
+            </button> */}
           </div>
         </div>
       </motion.nav>

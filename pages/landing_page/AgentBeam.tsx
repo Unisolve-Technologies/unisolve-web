@@ -2,6 +2,8 @@
 import React, { forwardRef, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
+import Image from "next/image";
+import logo from "@/assets/images/logo.png";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -11,9 +13,16 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-10 flex size-12 items-center justify-center rounded-full p-3",
         className,
       )}
+      style={{
+        background:
+          "linear-gradient(135deg,rgba(18,18,30,0.95) 0%,rgba(30,30,48,0.9) 100%)",
+        border: "1px solid rgba(6,182,212,0.25)",
+        boxShadow: "0 0 20px rgba(6,182,212,0.1), 0 4px 16px rgba(0,0,0,0.5)",
+        backdropFilter: "blur(12px)",
+      }}
     >
       {children}
     </div>
@@ -49,7 +58,8 @@ export default function AgentBeam() {
             <Icons.notion />
           </Circle>
           <Circle ref={div4Ref} className="size-16">
-            <Icons.openai />
+            {/* <Icons.openai /> */}
+            <Image src={logo} alt="logo" />
           </Circle>
           <Circle ref={div6Ref}>
             <Icons.zapier />

@@ -57,7 +57,7 @@ const services = [
     id: 2,
     icon: Globe,
     title: "Web Development",
-    tag: "Trending",
+    // tag: "Trending",
     tagColor: "from-violet-400 to-purple-400",
     description:
       "Build fast, modern web applications with Next.js, React, and cutting-edge frameworks. Pixel-perfect, lightning-fast, and SEO optimized.",
@@ -71,11 +71,11 @@ const services = [
     id: 3,
     icon: Smartphone,
     title: "Mobile Apps",
-    tag: "New",
+    // tag: "New",
     tagColor: "from-emerald-400 to-teal-400",
     description:
       "Cross-platform mobile applications for iOS and Android that feel native, perform flawlessly, and delight users from first launch.",
-    features: ["React Native", "iOS & Android", "Offline-first design"],
+    features: ["Flutter", "iOS & Android", "Offline-first design"],
     glowColor: "rgba(16,185,129,0.25)",
     borderColor: "rgba(16,185,129,0.3)",
     iconBg: "from-emerald-500/20 to-teal-500/20",
@@ -113,7 +113,7 @@ const services = [
     id: 6,
     icon: Shield,
     title: "Cybersecurity",
-    tag: "Critical",
+    // tag: "Critical",
     tagColor: "from-red-400 to-pink-400",
     description:
       "Protect your digital assets with comprehensive security audits, penetration testing, and proactive monitoring that never sleeps.",

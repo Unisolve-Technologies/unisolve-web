@@ -179,13 +179,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Mail className="text-cyan-400 shrink-0 mt-1" size={18} />
                 <a
-                  href="mailto:info@unisolve.tech"
+                  href="mailto:info@unisolve.live"
                   className="text-slate-400 hover:text-cyan-400 transition-colors"
                 >
-                  info@unisolve.tech
+                  info@unisolve.live
                 </a>
               </li>
-              <li className="flex items-start gap-3">
+              {/* <li className="flex items-start gap-3">
                 <Phone className="text-cyan-400 shrink-0 mt-1" size={18} />
                 <a
                   href="tel:+919876543210"
@@ -193,10 +193,10 @@ const Footer = () => {
                 >
                   +91 98765 43210
                 </a>
-              </li>
+              </li> */}
               <li className="flex items-start gap-3">
                 <MapPin className="text-cyan-400 shrink-0 mt-1" size={18} />
-                <span className="text-slate-400">India</span>
+                <span className="text-slate-400">Global Remote Team</span>
               </li>
             </ul>
           </div>

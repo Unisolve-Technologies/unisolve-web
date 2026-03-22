@@ -5,9 +5,6 @@ import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Zap, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
-import Image from "next/image";
-import Logo from "@/assets/images/logo.png";
-import Link from "next/link";
 
 interface HeroProps {
   className?: string;
@@ -206,83 +203,10 @@ const Hero = ({ className }: HeroProps) => {
       />
 
       {/* Top edge glow */}
-      <div className="pointer-events-none absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
+      <div className="pointer-events-none absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/40 to-transparent" />
 
       {/* Vignette */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(0,0,8,0.85)_100%)]" />
-
-      {/* ── Navbar ─────────────────────────────────────────── */}
-      <motion.nav
-        initial={{ opacity: 0, y: -16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-0 left-0 right-0 z-50 w-full"
-      >
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center gap-2.5">
-            <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center"
-              style={{
-                background: "rgba(6,182,212,0.12)",
-                border: "1px solid rgba(6,182,212,0.3)",
-              }}
-            >
-              <Image src={Logo.src} alt="Logo" width={18} height={18} />
-            </div>
-            <span className="font-bold text-lg text-white tracking-tight">
-              Unisolve
-            </span>
-          </div>
-
-          {/* Nav links */}
-          <div className="hidden md:flex items-center gap-7 text-sm font-medium">
-            {["Services", "Technologies", "Contact", "Pricing"].map((item) => (
-              <a
-                key={item}
-                href={
-                  item === "Services"
-                    ? "/services"
-                    : item === "Contact"
-                      ? "#contact"
-                      : "#"
-                }
-                className="text-zinc-500 hover:text-white transition-colors duration-200"
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-
-          {/* Right side */}
-          <div className="flex items-center gap-3">
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="hidden sm:flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold text-black"
-              style={{
-                background: "linear-gradient(135deg,#06b6d4,#3b82f6)",
-                boxShadow: "0 0 20px rgba(6,182,212,0.3)",
-              }}
-            >
-              Get started <ArrowRight size={14} />
-            </motion.a>
-
-            {/* <button
-              onClick={() => setTheme(isDark ? "light" : "dark")}
-              className="p-2 rounded-full text-zinc-400 hover:text-white transition-colors"
-              style={{ background: "rgba(255,255,255,0.05)" }}
-            >
-              {isDark ? (
-                <Sun className="w-4 h-4" />
-              ) : (
-                <Moon className="w-4 h-4" />
-              )}
-            </button> */}
-          </div>
-        </div>
-      </motion.nav>
 
       {/* ── Hero content ───────────────────────────────────── */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20 pb-16">
@@ -348,7 +272,7 @@ const Hero = ({ className }: HeroProps) => {
               />
             </span>
             <br className="hidden sm:block" /> with{" "}
-            <span className="text-white">AI Automation</span>
+            <span className="text-white">Unisolve</span>
           </motion.h1>
         </motion.div>
 

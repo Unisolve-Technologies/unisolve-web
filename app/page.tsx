@@ -11,7 +11,6 @@ export default function Home() {
       <BusinessEverywere />
       <SolutionsTailored />
       <ContactSection />
-      <Footer />
     </>
   );
 }

@@ -296,7 +296,7 @@ const Hero = ({ className }: HeroProps) => {
           className="flex flex-col sm:flex-row items-center gap-4 mb-20"
         >
           <motion.a
-            href="#contact"
+            href="contact-us"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             className="flex items-center gap-2 px-7 py-3.5 rounded-full font-bold text-sm text-white"

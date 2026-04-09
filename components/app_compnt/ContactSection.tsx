@@ -99,11 +99,25 @@ const ContactSection = () => {
     setFormData({ ...formData, businessType: value });
   };
 
+  const APPS_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbycNL6CY8TLO72u46EF-cRUyLn10FrTTBAgo5ZxmyBvmrB1iyG54Jl2YMrWo9mISk4KOQ/exec";
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      await fetch(APPS_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors", // Apps Script doesn't return CORS headers on POST
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          businessType: formData.businessType,
+          message: formData.subject,
+        }),
+      });
       setIsSubmitted(true);
       setTimeout(() => {
         setFormData({
@@ -115,7 +129,12 @@ const ContactSection = () => {
         });
         setIsSubmitted(false);
       }, 3000);
-    }, 1500);
+    } catch {
+      // Even with no-cors, network errors can still throw
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
